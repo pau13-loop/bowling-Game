@@ -84,3 +84,42 @@ def bowling_game(frames):
             throw_counter += 1
             i += 1
     return punctutation
+
+
+if __name__ == "__main__":
+    #!INTEGRES
+    # assert bowling_game(12345123451234512345) == 60
+    #!NULL
+    # assert bowling_game('9-9-9-9-9-9-9-9-9-9-') == 90
+    #!SPARES
+    # assert bowling_game('5/5/5/5/5/5/5/5/5/5/5') == 150
+    # assert bowling_game('5/324/5/343152424152') == 82
+    # assert bowling_game('3/4/5/3/1/421/8/2/6/7') == 136
+    #!STRIKES
+    #! FIRST IS AN INT
+    # INT - INT
+    assert bowling_game('X24X17332542143517') == 88
+    assert bowling_game('42X4225X5224524536') == 90
+    assert bowling_game('3518X54X24X71X31') == 111
+    # INT - NULL
+    # assert bowling_game('X6-52X7-4245722662') == 93
+    # INT - SPARE
+    # assert bowling_game('X5/35X2/4235712116') == 107
+    #! FIRST IS A NULL
+    # NULL - INT
+    # assert bowling_game('X-471X-84215724571') == 90
+    # NULL - SPARE
+    # assert bowling_game('X-/42X-/5215423681') == 112
+    # NULL - NULL
+    # assert bowling_game('X--42X--5234411836') == 63
+    #! FIRST IS A STRIKE
+    # STRIKE - INT
+    #assert bowling_game('XX6272X6235721662') == 119
+    #assert bowling_game('XX5326XX52523651') == 130
+    # STRIKE - STRIKE
+    #!assert bowling_game('XXXXXXXXXXXX') == 300
+    # STRIKE - NULL
+    #assert bowling_game('XX-625XX-5136235') == 109
+    #!MIXED
+
+    #!assert bowling_game('625/6353X436/2441-5') == 93
