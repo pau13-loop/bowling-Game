@@ -69,9 +69,11 @@ def test_strike_strike_integer():
 
 #STRIKE - STRIKE
 # def test_strike_strike_strike():
-    #!assert bowling_game('XXXXXXXXXXXX') == 300
+    assert bowling_game('XXXXXXXXXXXX') == 300
 
     #STRIKE - NULL
+
+
 def test_strike_strike_null():
     assert bowling_game('XX-625XX-5136235') == 109
 
@@ -80,3 +82,7 @@ def test_strike_strike_null():
 
 def test_mixed():
     assert bowling_game('625/6353X436/2441-5') == 93
+    assert bowling_game('26X3/4281X422/5/2/5') == 121
+    assert bowling_game('5/3/X9---2/4/XXX4/') == 169
+    assert bowling_game('XX4/4/3/XX2-1-XX9') == 157
+    assert bowling_game('317/4/-79/532/X4/XXX') == 148
