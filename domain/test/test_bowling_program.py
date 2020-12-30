@@ -31,9 +31,8 @@ def test_strike_int_int():
     assert bowling_game('42X4225X5224524536') == 90
     assert bowling_game('3518X54X24X71X31') == 111
 
+
 #INT - NULL
-
-
 def test_strike_int_null():
     assert bowling_game('X6-52X7-4245722662') == 93
 
@@ -71,18 +70,20 @@ def test_strike_strike_integer():
 # def test_strike_strike_strike():
     assert bowling_game('XXXXXXXXXXXX') == 300
 
-    #STRIKE - NULL
 
-
+#STRIKE - NULL
 def test_strike_strike_null():
     assert bowling_game('XX-625XX-5136235') == 109
 
+
 # MIXED random test cases
-
-
 def test_mixed():
     assert bowling_game('625/6353X436/2441-5') == 93
     assert bowling_game('26X3/4281X422/5/2/5') == 121
     assert bowling_game('5/3/X9---2/4/XXX4/') == 169
     assert bowling_game('XX4/4/3/XX2-1-XX9') == 157
     assert bowling_game('317/4/-79/532/X4/XXX') == 148
+    assert bowling_game('X7/326/XX5/435/XXX') == 174
+    assert bowling_game('13635/6/8/X6/545/X7/') == 151
+    assert bowling_game('4/6/XX9/X8/XXXXX') == 235
+    assert bowling_game('4/X-/4/-/XX7/4/7/X') == 182
