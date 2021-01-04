@@ -8,17 +8,17 @@ def test_integres():
     assert bowling_game(32611661144527814225) == 71
 
 
-# NULLS tests
-def test_null():
-    assert bowling_game('9-9-9-9-9-9-9-9-9-9-') == 90
-    assert bowling_game('2-452763----4245326-') == 55
-
-
 # SPARES tests
 def test_spare():
     assert bowling_game('5/5/5/5/5/5/5/5/5/5/5') == 150
     assert bowling_game('5/324/5/343152424152') == 82
     assert bowling_game('3/4/5/3/1/421/8/2/6/7') == 136
+
+
+# NULLS tests
+def test_null():
+    assert bowling_game('9-9-9-9-9-9-9-9-9-9-') == 90
+    assert bowling_game('2-452763----4245326-') == 55
 
 
 # STRIKES tests
@@ -87,3 +87,4 @@ def test_mixed():
     assert bowling_game('13635/6/8/X6/545/X7/') == 151
     assert bowling_game('4/6/XX9/X8/XXXXX') == 235
     assert bowling_game('4/X-/4/-/XX7/4/7/X') == 182
+    assert bowling_game('2/6/X639/6/-4XXXXX') == 184
