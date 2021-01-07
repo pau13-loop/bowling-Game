@@ -1,4 +1,4 @@
-from src.bowling_program import bowling_game
+from original_program.bowling_program import bowling_game
 import pytest
 
 

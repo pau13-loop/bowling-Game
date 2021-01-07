@@ -3,7 +3,7 @@ throw_counter = 0
 numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 
 
-class Bowling:
+class Bowling():
 
     def __init__(self, frames):
         self.frames = frames
@@ -19,6 +19,7 @@ class Bowling:
         points += 10
         throw_counter += 2
         i += 1
+
         # INT - (INT, SPARE)
         if throw_counter < 20 and self.frames[i] in numbers:
             points += int(self.frames[i])
@@ -28,6 +29,7 @@ class Bowling:
             # - SPARE
             elif self.frames[i+1] == '/':
                 points += 10 - int(self.frames[i])
+
         # NULL - (INT, SPARE)
         elif self.frames[i] == '-':
             # - INT
@@ -36,6 +38,7 @@ class Bowling:
             # - SPARE
             elif self.frames[i+1] == '/':
                 points += 10
+
         # STRIKE - (INT, STRIKE)
         elif throw_counter < 20 and self.frames[i] == 'X':
             points += 10

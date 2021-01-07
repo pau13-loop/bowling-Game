@@ -1,14 +1,12 @@
 from src.main import Bowling
 import pytest
 
-
 # INTEGRES tests
+
+
 def test_integres():
-    assert 60 == Bowling('12345123451234512345').bowling_game()
-    assert 71 == Bowling('32611661144527814225').bowling_game()
-    #assert Bowling('32611661144527814225').bowling_game() == 71
-    #assert Bowling('12345123451234512345').bowling_game() == 60
-    #assert Bowling('32611661144527814225').bowling_game() == 71
+    assert Bowling('12345123451234512345').bowling_game() == 60
+    assert Bowling('32611661144527814225').bowling_game() == 71
 
 
 # SPARES tests
