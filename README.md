@@ -8,6 +8,7 @@
 1. [Used Technologies](#used-technologies)
 1. [Content](#Content)
 1. [Reflections](#reflections)
+1. [Retrospective](#retrospective)
 1. [License](#license)
 
 ---
@@ -70,6 +71,40 @@ In this document we will find an explanation of all our program, explained line 
 ## Reflections
 
 It has been a really interesting kata and really enjoyable. Between the Christmass Projects i had i will choose this one straight away even knowing that it left me a few days musing how i could solve it. The first good point of this kata is that finally i learn how it works the score card of bowling. And the best thing is that now i trust myself more when it comes the moment of work with classes with Python. I got to know how the OOP (Object-Oriented Programing) paradigm it works and i had so many problems during this kata that i didn't know how to solve at the beggining but thanks to the deep research i could get over them and know how to react against this kinds of issues that i'll find in the future. An awesome kata, perfect to recmoend to the people that just has started to learno how to work with the OOP (Object-Oriented Programing) paradigm and loves the challenges.
+
+---
+
+**[⬆ back to top](#table-of-contents)**
+
+## Retrospective
+
+###### Did you do any design before you started coding ? If so, does your code have this design now ?
+
+Yes i wrote my test cases and after that i wrote a design of the program that i should make to pass the test cases. The design was of the whole program and i should say that i've done this design without follow the OOP, this means that the original design wad all conformed with a single function that operate for all the test cases. Is true that after finished the program i adapted to the OOP paradigm and i should say that even knowing that the program hass been descomposed and refactorized still keeping the essence of the original design, of course is not looking the same but it's really close of what i thought i want to do.
+
+---
+
+###### At what point did you realize you can't simply loop over frames, that you inf act need to refer to the previous frame as well as the current one in order to calculate the score ? In an ideal world, when should you have realized this ?
+
+I realized this one time i start to code my program, this issue stop my development because i couldn't find a way to check the frames after a strike and how to add the extra point to the score with a boolean. After two nights wondering about how i could do it, i decide to change the _for loop_ for a _while loop_ and get rid of the boolean and by this way i was able to know with wich frame i'm working on and i was able too to check for the frames that were previous or posteriors to the strike and add the extra punctuation to the score without to deal with adversities.
+
+---
+
+###### Look at the code you have ended up with, and compare it with the above desription of the rules of bowling. Is there any similarity in the words used in each ?
+
+Yes, beacuse while i was developing the program i try to called the variables of the program and to name the functions with the bowling vocabulary to make easier the comprehension of the program to users that alredy know how a bowling game work and know how the score card works. If you have played bowling before or even just once in your life you'll be familiarized with the vocabulary.
+
+---
+
+###### Did you do enough refactoring ? How would you know ?
+
+I'm never too sure if i did enough refacotring in my programs but i know it has been well refactorized when the length of the program gets reduced and keep his easy comprehension. When i can't find any code smells in my program. And when i can't find any one of the mistakes that i have to check from my checklist
+
+---
+
+###### How did you decide wich tests to write and in wich order ? Did it matter what order you implemented them in ?
+
+Always i try to start with the easuest test when i know taht the programs pass the test cases i just increase the complexity of the test cases, Always i try to follow the sequence that the instructions of the program that i have to read tells me. For example in case of the bowling game program i never will start with the spares if before i didn't wrote a code that check for the integres and add them to the score, how i could know how many pings i dropped down with the spare if i can't check the throw before ? I just an example to understand how i have worked with the test cases of this program. And i thinks it matters a lot in wich order you choose to implement the test cases. I think it will make a strong influence over your program, on how much time you spent to get the expected result and about how many bugs you have typed on your program. I think that the order that you choose to implement the test cases helps the development of your program and majes you a better programmer in most of the cases.
 
 ---
 
