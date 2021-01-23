@@ -1,4 +1,4 @@
-class Bowling():
+class BowlingScoreCard():
 
     def __init__(self, frames):
         self.frames = frames
@@ -6,7 +6,24 @@ class Bowling():
         self.throw_counter = 0
         self.numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
-    def strike(self):
+    def game_score(self):
+
+        score = 0
+
+        self.frames = self.frames.replace('-', '0')
+
+        while self.throw_counter < 20:
+            if self.frames[self.i] == 'X':
+                score += self.get_strike_score()
+            elif self.frames[self.i] == '/':
+                score += self.get_spare_score()
+            else:
+                score += self.get_pins_score()
+        score += self.get_bonus_balls_score()
+
+        return score
+
+    def get_strike_score(self):
 
         points = 10
         self.throw_counter += 2
@@ -34,7 +51,7 @@ class Bowling():
 
         return points
 
-    def spare(self):
+    def get_spare_score(self):
 
         points = 0
 
@@ -55,7 +72,7 @@ class Bowling():
 
         return points
 
-    def integer(self):
+    def get_pins_score(self):
 
         points = int(self.frames[self.i])
         self.i += 1
@@ -63,7 +80,7 @@ class Bowling():
 
         return points
 
-    def extra_frames(self):
+    def get_bonus_balls_score(self):
 
         points = 0
 
@@ -77,20 +94,3 @@ class Bowling():
             self.i += 1
 
         return points
-
-    def bowling_game(self):
-
-        score = 0
-
-        self.frames = self.frames.replace('-', '0')
-
-        while self.throw_counter < 20:
-            if self.frames[self.i] == 'X':
-                score += self.strike()
-            elif self.frames[self.i] == '/':
-                score += self.spare()
-            else:
-                score += self.integer()
-        score += self.extra_frames()
-
-        return score
